@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Guia de Palavras/Comandos em JavaScript</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+  <h1>Guia de Palavras/Comandos em JavaScript</h1>
+
+  <div id="word-guide"></div>
+
+  <h2>Exemplo: Contador de Cliques</h2>
+
+  <p>Este é um exemplo simples que conta o número de vezes que um botão é clicado.</p>
+
+  <button id="click-button">Clique Aqui</button>
+
+  <p id="click-count">Cliques: 0</p>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
