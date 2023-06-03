@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Caça-Palavras - LGPD</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+  <h1>Caça-Palavras - LGPD</h1>
+
+  <div id="word-search"></div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
