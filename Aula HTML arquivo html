@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Guia de Palavras/Comandos em HTML5</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+  <h1>Guia de Palavras/Comandos em HTML5</h1>
+
+  <div id="word-guide"></div>
+
+  <h2>Exemplo: Formulário de Contato</h2>
+
+  <form id="contact-form">
+
+    <div>
+
+      <label for="name">Nome:</label>
+
+      <input type="text" id="name" name="name" required>
+
+    </div>
+
+    <div>
+
+      <label for="email">Email:</label>
+
+      <input type="email" id="email" name="email" required>
+
+    </div>
+
+    <div>
+
+      <label for="message">Mensagem:</label>
+
+      <textarea id="message" name="message" required></textarea>
+
+    </div>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
