@@ -1,0 +1,14 @@
+button {
+
+  padding: 10px 20px;
+
+  font-size: 16px;
+
+}
+
+#click-count {
+
+  font-size: 18px;
+
+}
+
