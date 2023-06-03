@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload de Arquivos em PDF</title>
+</head>
+<body>
+  <h1>Upload de Arquivos em PDF</h1>
+
+  <form id="formulario">
+    <input type="file" accept="application/pdf" id="input-arquivo">
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var arquivo = document.getElementById('input-arquivo').files[0];
+      if (!arquivo) {
+        alert('Nenhum arquivo selecionado.');
+        return;
+      }
+
+      if (arquivo.type !== 'application/pdf') {
+        alert('Selecione um arquivo em PDF.');
+        return;
+      }
+
+      // Crie um objeto FormData
+      var formData = new FormData();
+      formData.append('arquivo', arquivo);
+
+      // Envie a requisição para o servidor
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/endpoint-de-upload'); // Substitua pelo seu endpoint de upload
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          alert('Arquivo enviado com sucesso!');
+          // Faça alguma ação após o upload do arquivo
+        } else {
+          alert('Ocorreu um erro durante o upload do arquivo.');
+        }
+      };
+      xhr.send(formData);
+    });
+  </script>
+</body>
+</html>
