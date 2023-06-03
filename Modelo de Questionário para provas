@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Múltipla Escolha</title>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+  <h1>Formulário de Múltipla Escolha</h1>
+
+  <form id="formulario">
+    <h2>Questões</h2>
+
+    <!-- Questão 1 -->
+    <p>1. Qual é a capital da França?</p>
+    <label>
+      <input type="radio" name="questao1" value="a"> a) Paris
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="questao1" value="b"> b) Londres
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="questao1" value="c"> c) Roma
+    </label>
+    <br>
+
+    <!-- Questão 2 -->
+    <!-- Repita o mesmo padrão para as demais questões -->
+
+    <!-- ... -->
+
+    <!-- Questão 30 -->
+    <p>30. Qual é a cor do céu?</p>
+    <label>
+      <input type="radio" name="questao30" value="a"> a) Azul
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="questao30" value="b"> b) Vermelho
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="questao30" value="c"> c) Verde
+    </label>
+    <br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="qrcode"></div>
+
+  <script>
+    // Função para criar o QR Code
+    function criarQRCode(dados) {
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: dados,
+        width: 128,
+        height: 128
+      });
+    }
+
+    // Função para processar o formulário
+    document.getElementById("formulario").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var respostas = {};
+
+      // Obtenha as respostas selecionadas para cada questão
+      for (var i = 1; i <= 30; i++) {
+        var nomeQuestao = "questao" + i;
+        var radios = document.getElementsByName(nomeQuestao);
+
+        for (var j = 0; j < radios.length; j++) {
+          if (radios[j].checked) {
+            respostas[nomeQuestao] = radios[j].value;
+            break;
+          }
+        }
+      }
+
+      // Crie o gabarito em formato JSON
+      var gabarito = JSON.stringify(respostas);
+
+      // Crie o QR Code com o gabarito
+      criarQRCode(gabarito);
+    });
+  </script>
+</body>
+</html>
