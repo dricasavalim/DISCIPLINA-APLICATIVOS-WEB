@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galeria de Imagens</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Galeria de Imagens</h1>
+
+  <div class="gallery">
+    <!-- Aqui serão inseridas as imagens -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
