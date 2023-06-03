@@ -1,0 +1,48 @@
+var words = [
+
+  'CONSENTIMENTO',
+
+  'DADO',
+
+  'CONTROLADOR',
+
+  'ENCARREGADO',
+
+  'TRATAMENTO',
+
+  'ANONIMIZAÇÃO',
+
+  'PORTABILIDADE',
+
+  'PRIVACIDADE',
+
+  'TITULAR',
+
+  'LGPD'
+
+];
+
+var wordSearch = [
+
+  ['C', 'O', 'N', 'S', 'E', 'N', 'T', 'I', 'M', 'E', 'N', 'T', 'O'],
+
+  ['D', 'A', 'D', 'O', 'X', 'P', 'D', 'R', 'B', 'U', 'G', 'N', 'D'],
+
+  ['E', 'U', 'G', 'S', 'O', 'C', 'T', 'N', 'R', 'O', 'L', 'A', 'D'],
+
+  ['N', 'N', 'D', 'O', 'E', 'E', 'R', 'E', 'P', 'M', 'L', 'A', 'H'],
+
+  ['S', 'A', 'R', 'A', 'T', 'R', 'A', 'T', 'A', 'M', 'E', 'N', 'T'],
+
+  ['E', 'R', 'L', 'I', 'C', 'I', 'T', 'O', 'C', 'E', 'R', 'P', 'D'],
+
+  ['N', 'A', 'I', 'Z', 'I', 'M', 'A', 'N', 'A', 'N', 'O', 'M', 'Z'],
+
+  ['T', 'A', 'O', 'D', 'L', 'E', 'R', 'I', 'P', 'R', 'I', 'V', 'A'],
+
+  ['O', 'B', 'I', 'T', 'U', 'L', 'A', 'R', 'P', 'O', 'R', 'T', 'A'],
+
+  ['R', 'E', 'T', 'A', 'M', 'E', 'N', 'T', 'O', 'R', 'I', 'C', 'O'],
+
+  ['G', 'A', 'B', 'R', 'E', 'T', 'A', 'L', 'G', 'D', 'P
+
