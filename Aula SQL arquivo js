@@ -1,0 +1,80 @@
+var wordGuide = [
+
+  { word: 'SELECT', description: 'Usado para selecionar dados de uma tabela.' },
+
+  { word: 'FROM', description: 'Usado para especificar a tabela de onde os dados serão selecionados.' },
+
+  { word: 'WHERE', description: 'Usado para definir condições para filtrar os dados selecionados.' },
+
+  { word: 'INSERT INTO', description: 'Usado para inserir novos registros em uma tabela.' },
+
+  { word: 'UPDATE', description: 'Usado para atualizar registros existentes em uma tabela.' },
+
+  { word: 'DELETE FROM', description: 'Usado para excluir registros de uma tabela.' }
+
+];
+
+function buildWordGuide() {
+
+  var wordGuideElement = document.getElementById('word-guide');
+
+  for (var i = 0; i < wordGuide.length; i++) {
+
+    var wordItem = document.createElement('div');
+
+    var word = document.createElement('strong');
+
+    word.textContent = wordGuide[i].word + ': ';
+
+    var description = document.createElement('span');
+
+    description.textContent = wordGuide[i].description;
+
+    wordItem.appendChild(word);
+
+    wordItem.appendChild(description);
+
+    wordGuideElement.appendChild(wordItem);
+
+  }
+
+}
+
+function fetchStudentData() {
+
+  // Aqui você pode adicionar código para recuperar os dados de uma tabela de alunos em um banco de dados usando uma biblioteca SQL ou API de backend.
+
+  // Por simplicidade, vamos simular uma chamada assíncrona que retorna alguns dados de exemplo.
+
+  // Dados de exemplo
+
+  var students = [
+
+    { name: 'João', age: 15 },
+
+    { name: 'Maria', age: 16 },
+
+    { name: 'Pedro', age: 14 }
+
+  ];
+
+  var studentList = document.getElementById('student-list');
+
+  studentList.innerHTML = '';
+
+  students.forEach(function(student) {
+
+    var listItem = document.createElement('li');
+
+    listItem.textContent = student.name + ' - ' + student.age + ' anos';
+
+    studentList.appendChild(listItem);
+
+  });
+
+}
+
+document.getElementById('fetch-data-button').addEventListener('click', fetchStudentData);
+
+buildWordGuide();
+
