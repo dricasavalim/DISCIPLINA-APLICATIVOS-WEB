@@ -1,0 +1,22 @@
+var input = document.getElementById('display');
+
+function appendInput(value) {
+
+  input.value += value;
+
+}
+
+function calculate() {
+
+  var result = eval(input.value);
+
+  input.value = result;
+
+}
+
+function clearDisplay() {
+
+  input.value = '';
+
+}
+
