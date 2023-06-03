@@ -1,0 +1,8 @@
+var words = [
+  { word: 'VARIÁVEL', direction: 'horizontal', row: 2, column: 1 },
+  { word: 'FUNÇÃO', direction: 'horizontal', row: 4, column: 2 },
+  { word: 'PONTEIRO', direction: 'horizontal', row: 6, column: 1 },
+  { word: 'CLASSE', direction: 'vertical', row: 1, column: 6 },
+  { word: 'HERANÇA', direction: 'vertical', row: 1, column: 8 },
+  { word: 'LOOP', direction: 'vertical', row: 3, column: 4 },
+  { word: 'IF',
