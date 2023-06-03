@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Guia de Palavras/Comandos em C++</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+  <h1>Guia de Palavras/Comandos em C++</h1>
+
+  <div id="word-guide"></div>
+
+  <h2>Exemplo: Soma de Dois Números</h2>
+
+  <p>Este é um exemplo simples de um programa em C++ que solicita dois números ao usuário e exibe a soma deles.</p>
+
+  <button id="calculate-button">Calcular Soma</button>
+
+  <p id="result"></p>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
