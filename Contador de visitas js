@@ -1,0 +1,26 @@
+window.addEventListener('load', function() {
+
+  // Verifica se há um contador armazenado no armazenamento local
+
+  if (localStorage.getItem('counter')) {
+
+    var counter = parseInt(localStorage.getItem('counter'));
+
+    counter++;
+
+    localStorage.setItem('counter', counter);
+
+    document.getElementById('counter').textContent = counter;
+
+  } else {
+
+    // Se não houver contador, cria um novo contador e define o valor inicial como 1
+
+    localStorage.setItem('counter', '1');
+
+    document.getElementById('counter').textContent = '1';
+
+  }
+
+});
+
