@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Cruzadinha - C++</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+  <h1>Cruzadinha - C++</h1>
+
+  <div id="crossword"></div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
