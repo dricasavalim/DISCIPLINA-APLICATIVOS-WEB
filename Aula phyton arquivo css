@@ -1,0 +1,14 @@
+input,
+
+select,
+
+button {
+
+  margin-top: 5px;
+
+  padding: 5px;
+
+  font-size: 16px;
+
+}
+
