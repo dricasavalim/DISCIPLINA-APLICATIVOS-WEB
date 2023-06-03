@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Cruzadinha - Sistemas Operacionais</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+  <h1>Cruzadinha - Sistemas Operacionais</h1>
+
+  <div id="crossword"></div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
