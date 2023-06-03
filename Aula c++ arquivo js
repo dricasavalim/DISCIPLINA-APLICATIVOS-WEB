@@ -1,0 +1,58 @@
+var wordGuide = [
+
+  { word: 'cout', description: 'Usado para exibir mensagens ou valores na saída do console.' },
+
+  { word: 'cin', description: 'Usado para receber valores de entrada do usuário através do console.' },
+
+  { word: 'int', description: 'Usado para declarar uma variável do tipo inteiro.' },
+
+  { word: 'float', description: 'Usado para declarar uma variável do tipo ponto flutuante (número decimal).' },
+
+  { word: 'if', description: 'Usado para fazer uma condição e executar um bloco de código se a condição for verdadeira.' },
+
+  { word: 'else', description: 'Usado em conjunto com o "if" para executar um bloco de código se a condição for falsa.' }
+
+];
+
+function buildWordGuide() {
+
+  var wordGuideElement = document.getElementById('word-guide');
+
+  for (var i = 0; i < wordGuide.length; i++) {
+
+    var wordItem = document.createElement('div');
+
+    var word = document.createElement('strong');
+
+    word.textContent = wordGuide[i].word + ': ';
+
+    var description = document.createElement('span');
+
+    description.textContent = wordGuide[i].description;
+
+    wordItem.appendChild(word);
+
+    wordItem.appendChild(description);
+
+    wordGuideElement.appendChild(wordItem);
+
+  }
+
+}
+
+function calculateSum() {
+
+  var num1 = parseInt(prompt('Digite o primeiro número:'));
+
+  var num2 = parseInt(prompt('Digite o segundo número:'));
+
+  var sum = num1 + num2;
+
+  document.getElementById('result').textContent = 'A soma dos números é: ' + sum;
+
+}
+
+document.getElementById('calculate-button').addEventListener('click', calculateSum);
+
+buildWordGuide();
+
