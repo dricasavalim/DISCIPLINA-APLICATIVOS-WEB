@@ -1,0 +1,62 @@
+var wordGuide = [
+
+  { word: 'escreva', description: 'Usado para exibir mensagens ou valores na saída do programa.' },
+
+  { word: 'leia', description: 'Usado para receber valores de entrada do usuário.' },
+
+  { word: 'se', description: 'Usado para fazer uma condição e executar um bloco de código se a condição for verdadeira.' },
+
+  { word: 'senao', description: 'Usado em conjunto com o "se" para executar um bloco de código se a condição for falsa.' },
+
+  { word: 'para', description: 'Usado para criar um loop que executa um bloco de código várias vezes.' },
+
+  { word: 'funcao', description: 'Usado para definir uma função que pode ser chamada posteriormente.' },
+
+  { word: 'retorne', description: 'Usado para retornar um valor de uma função.' }
+
+];
+
+function buildWordGuide() {
+
+  var wordGuideElement = document.getElementById('word-guide');
+
+  for (var i = 0; i < wordGuide.length; i++) {
+
+    var wordItem = document.createElement('div');
+
+    var word = document.createElement('strong');
+
+    word.textContent = wordGuide[i].word + ': ';
+
+    var description = document.createElement('span');
+
+    description.textContent = wordGuide[i].description;
+
+    wordItem.appendChild(word);
+
+    wordItem.appendChild(description);
+
+    wordGuideElement.appendChild(wordItem);
+
+  }
+
+}
+
+function calculate() {
+
+  var num1 = parseFloat(document.getElementById('num1').value);
+
+  var operator = document.getElementById('operator').value;
+
+  var num2 = parseFloat(document.getElementById('num2').value);
+
+  var resultElement = document.getElementById('result');
+
+  var result;
+
+  if (operator === '+') {
+
+    result = num1 + num2;
+
+ 
+
