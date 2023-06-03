@@ -1,0 +1,84 @@
+var words = [
+
+  { word: 'WINDOWS', direction: 'horizontal', row: 2, column: 1 },
+
+  { word: 'LINUX', direction: 'horizontal', row: 5, column: 3 },
+
+  { word: 'MACOS', direction: 'horizontal', row: 8, column: 1 },
+
+  { word: 'ANDROID', direction: 'vertical', row: 1, column: 6 },
+
+  { word: 'IOS', direction: 'vertical', row: 1, column: 9 },
+
+  { word: 'UBUNTU', direction: 'vertical', row: 3, column: 4 }
+
+];
+
+var crossword = [
+
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
+
+  ['_', 'A', '_', '_', '_', '_', '_', '_', '_'],
+
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
+
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
+
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
+
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
+
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
+
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_'],
+
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_']
+
+];
+
+function buildCrossword() {
+
+  var crosswordElement = document.getElementById('crossword');
+
+  for (var i = 0; i < crossword.length; i++) {
+
+    for (var j = 0; j < crossword[i].length; j++) {
+
+      var cell = document.createElement('div');
+
+      cell.className = 'cell';
+
+      cell.textContent = crossword[i][j];
+
+      crosswordElement.appendChild(cell);
+
+    }
+
+  }
+
+  for (var k = 0; k < words.length; k++) {
+
+    var word = words[k];
+
+    var direction = word.direction === 'horizontal' ? 1 : crossword.length;
+
+    for (var l = 0; l < word.word.length; l++) {
+
+      var row = word.row + (direction === 1 ? 0 : l);
+
+      var column = word.column + (direction === 1 ? l : 0);
+
+      var cell = crosswordElement.children[row * crossword.length + column];
+
+      cell.textContent = word.word[l];
+
+      cell.className += ' clue';
+
+    }
+
+  }
+
+}
+
+buildCrossword();
+
