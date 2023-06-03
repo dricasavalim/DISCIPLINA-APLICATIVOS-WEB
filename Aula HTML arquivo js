@@ -1,0 +1,70 @@
+var wordGuide = [
+
+  { word: 'div', description: 'Usado para criar uma seção ou divisão em um documento HTML.' },
+
+  { word: 'label', description: 'Usado para rotular elementos de formulário.' },
+
+  { word: 'input', description: 'Usado para criar campos de entrada de dados em um formulário.' },
+
+  { word: 'textarea', description: 'Usado para criar uma área de texto de várias linhas em um formulário.' },
+
+  { word: 'form', description: 'Usado para criar um formulário que pode ser enviado para um servidor.' },
+
+  { word: 'required', description: 'Atributo usado para tornar um campo de entrada obrigatório em um formulário.' }
+
+];
+
+function buildWordGuide() {
+
+  var wordGuideElement = document.getElementById('word-guide');
+
+  for (var i = 0; i < wordGuide.length; i++) {
+
+    var wordItem = document.createElement('div');
+
+    var word = document.createElement('strong');
+
+    word.textContent = wordGuide[i].word + ': ';
+
+    var description = document.createElement('span');
+
+    description.textContent = wordGuide[i].description;
+
+    wordItem.appendChild(word);
+
+    wordItem.appendChild(description);
+
+    wordGuideElement.appendChild(wordItem);
+
+  }
+
+}
+
+function submitForm(event) {
+
+  event.preventDefault();
+
+  var name = document.getElementById('name').value;
+
+  var email = document.getElementById('email').value;
+
+  var message = document.getElementById('message').value;
+
+  // Aqui você pode adicionar código para processar o formulário, enviar os dados para um servidor, etc.
+
+  // Por simplicidade, vamos apenas exibir os dados no console.
+
+  console.log('Nome:', name);
+
+  console.log('Email:', email);
+
+  console.log('Mensagem:', message);
+
+  // Limpa os campos do formulário
+
+  document.getElementById('contact-form').reset();
+
+}
+
+document.getElementById('contact-form
+
