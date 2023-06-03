@@ -1,0 +1,17 @@
+window.addEventListener('load', function() {
+  var gallery = document.querySelector('.gallery');
+
+  // Array com os URLs das imagens
+  var imageUrls = [
+    'imagem1.jpg',
+    'imagem2.jpg',
+    // Adicione os URLs das demais imagens aqui
+  ];
+
+  // Percorre o array de URLs das imagens e cria os elementos de imagem
+  imageUrls.forEach(function(url) {
+    var img = document.createElement('img');
+    img.src = url;
+    gallery.appendChild(img);
+  });
+});
