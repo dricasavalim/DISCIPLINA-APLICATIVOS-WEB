@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Player de Músicas</title>
+</head>
+<body>
+  <h1>Player de Músicas</h1>
+
+  <div id="player">
+    <audio id="audio-player" controls>
+      <source src="caminho-da-musica.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+  </div>
+
+  <script>
+    // Obtenha o elemento de áudio
+    var audio = document.getElementById('audio-player');
+
+    // Evento para iniciar a reprodução quando a página for carregada
+    window.addEventListener('load', function() {
+      audio.play();
+    });
+  </script>
+</body>
+</html>
