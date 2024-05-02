@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhar Elemento da Tabela Periódica</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+                        display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(16, 78, 192);
+        }
+
+        #container {
+            text-align: center;
+            font-color:rgb(222,22,222)
+        }
+
+        #result {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font:rgb(222,22,222)
+        }
+
+        #input-container {
+            margin-top: 10px;
+        }
+
+        #input {
+            text-transform: uppercase;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        #button {
+            padding: 5px 30px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Jogo de Adivinhar Elemento da Tabela Periódica
+            <p>exemplo nome: 'Hidrogênio', simbolo: 'H' 
+            nome: 'Hélio', simbolo: 'He' 
+           'Lítio', simbolo: 'Li' 
+              nome: 'Berílio', simbolo: 'Be'</p>
+        </h1>
+        <p id="result"></p>
+        <div id="input-container">
+            <label for="input">Digite o nome do elemento ou seu símbolo:</label>
+          
+            <input type="text" id="input">
+            <button id="button" onclick="verificarAdivinhacao()">Verificar</button>
+        </div>
+    </div>
+
+    <script>
+        const elementos = [
+            { nome: 'Hidrogênio', simbolo: 'H' },
+            { nome: 'Hélio', simbolo: 'He' },
+            { nome: 'Lítio', simbolo: 'Li' },
+            { nome: 'Berílio', simbolo: 'Be' },
+            // Adicione mais elementos conforme necessário
+        ];
+
+        let elementoSecreta = gerarElementoAleatorio();
+
+        function gerarElementoAleatorio() {
+            return elementos[Math.floor(Math.random() * elementos.length)];
+        }
+
+        function verificarAdivinhacao() {
+            const palpite = document.getElementById('input').value.toUpperCase();
+            const resultado = document.getElementById('result');
+
+            if (!elementos.some(elemento => elemento.nome.toUpperCase() === palpite || elemento.simbolo === palpite)) {
+                resultado.textContent = 'Por favor, insira um elemento válido da tabela periódica.';
+            } else {
+                if (palpite === elementoSecreta.nome.toUpperCase() || palpite === elementoSecreta.simbolo) {
+                    resultado.textContent = `Parabéns! Você acertou. O elemento secreto era ${elementoSecreta.nome} (${elementoSecreta.simbolo}).`;
+                    resultado.style.color = 'green';
+                    desabilitarInputEButton();
+                } else {
+                    resultado.textContent = `Tente novamente. O símbolo do elemento é ${elementoSecreta.simbolo}.`;
+                    resultado.style.color = 'red';
+                }
+            }
+        }
+
+        function desabilitarInputEButton() {
+            document.getElementById('input').disabled = true;
+            document.getElementById('button').disabled = true;
+        }
+    </script>
+</body>
+</html>
